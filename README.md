@@ -1,6 +1,7 @@
 ## Scraper Monitoring API
 Service designed to collect success and error information from scrapers and collectors.
 
+[![](https://badge.imagelayers.io/luiscape/hdx-monitor-scraper-status:latest.svg)](https://imagelayers.io/?images=luiscape/hdx-monitor-scraper-status:latest 'Get your own badge on imagelayers.io')
 
 ## Docker Usage
 Review the `Dockerfile` and run it linking to a MongoDB instance. `make setup` will try to setup its own collection in the instance (called `scraper_status`). This image doesn't need a volume mounted, but it needs the following environment variables in order to work appropriately:
