@@ -12,8 +12,10 @@ RUN \
   apt-get install git \
   && git clone http://github.com/luiscape/hdx-monitor-scraper-status \
   && cd hdx-monitor-scraper-status \
-  && make setup
+  && make configure
 
 WORKDIR '/hdx-monitor-scraper-status'
+
+EXPOSE 9000
 
 CMD ['make', 'run']
