@@ -1,4 +1,4 @@
-## HDX Monitor Scraper Notification API
+## Scraper Monitoring API
 Service designed to collect success and error information from scrapers and collectors.
 
 
