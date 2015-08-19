@@ -24,6 +24,7 @@ module.exports = function (app) {
         } else {
           var out = {
             'success': true,
+            'count': null,
             'records': []
           }
           for (i = 0; i < data.length; i++) {
