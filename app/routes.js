@@ -32,9 +32,11 @@ module.exports = function (app) {
             // Cleaning records that
             // don't have id.
             //
+            var c = 0
             if (typeof data[i].id === typeof undefined) {
               continue
             } else {
+              c += 1
               out.records.push({
                 'id': data[i].id,
                 'status': data[i].status,
@@ -42,6 +44,11 @@ module.exports = function (app) {
                 'time': data[i].time
               })
             }
+
+            //
+            // Adding count
+            //
+            out.count = c
           }
           res.send(out)
         }
