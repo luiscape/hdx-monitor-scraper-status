@@ -1,4 +1,3 @@
-// config/database.js
 module.exports = {
   'url': 'mongodb://' +
     process.env.MONGODB_USER_NAME + ':' +

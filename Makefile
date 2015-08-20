@@ -3,3 +3,6 @@ run:
 
 configure:
 	bash bin/configure.sh;
+
+tests:
+	bash bin/test.sh;
