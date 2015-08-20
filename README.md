@@ -12,11 +12,14 @@ The API has the following working methods:
  * `status`: Either `error` or `ok`.
  * `message`: A string with the message. Required in case of `error`.
  * `time`: An [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) time stamp (up to seconds).
+ * `datasets`: An array with dataset ids (not the hashes). 
 
 Example request:
 
 ```shell
-$ curl -X GET localhost:4000/ -d "id=scraper-test&status=error&message='Failed to connect to API.'&time=2015-06-01T14:34:01"
+$ curl -X POST localhost:4000/ \
+  -d "id=scraper-test&status=error&message='Failed to \
+  connect to API.'&time=2015-06-01T14:34:01&datasets=ebola-data,hospitals-dataset"
 ```
 
 ## Docker Setup
