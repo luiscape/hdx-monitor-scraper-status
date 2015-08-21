@@ -4,6 +4,7 @@
 # Run tests with istanbul and report coverage.
 #
 # istanbul cover _mocha -- -R spec
+pm2 start server.js
 istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec
 
 #
