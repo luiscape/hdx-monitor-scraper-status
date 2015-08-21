@@ -2,6 +2,13 @@ language: node_js
 node_js:
   - "0.12"
 
+services:
+  - mongodb
+
+before_script:
+  - sleep 15
+  - mongo mydb_test --eval "db.addUser('$MONGODB_USER_NAME', '$MONGODB_USER_PASSWORD')"
+
 install:
  - npm install
  - npm install istanbul

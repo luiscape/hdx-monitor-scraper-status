@@ -45,4 +45,4 @@ mongoose.connection.on('error', function (err) {
 //
 // Attempt connection with MongoDB.
 //
-mongoose.connect(DB.url || 'mongodb://localhost/test')
+mongoose.connect(DB.url)
