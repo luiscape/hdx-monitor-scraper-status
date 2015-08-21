@@ -2,7 +2,6 @@
 // Connects to database and runs server.
 //
 var cors = require('cors')
-var moment = require('moment')
 var bodyParser = require('body-parser')
 var express = require('express')
 var app = express()
@@ -18,6 +17,7 @@ var DB = require('./config/database')
 // if the database is ready.
 //
 mongoose.connection.on('connected', function (ref) {
+  app.use(cors())
   app.use(morgan('dev'))
   app.use(bodyParser.json())
   app.use(bodyParser.urlencoded({
@@ -45,4 +45,4 @@ mongoose.connection.on('error', function (err) {
 //
 // Attempt connection with MongoDB.
 //
-mongoose.connect('mongodb://localhost/test')
+mongoose.connect(DB.url || 'mongodb://localhost/test')
